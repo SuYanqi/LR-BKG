@@ -1,0 +1,12 @@
+bugbug
+xgboost
+joblib
+matplotlib
+numpy
+tensorflow
+scipy
+py2neo
+nltk
+gensim
+pyemd
+sklearn
