@@ -1,6 +1,7 @@
 # BugTossing
 
 Dataset Link: https://drive.google.com/file/d/17XXG75zmR3_bDeWKDNeXYNVL8ptAzUo3/view?usp=sharing
+Fasttext Model link: https://fasttext.cc/docs/en/pretrained-vectors.html (a. download the English wiki.en.bin model b. construct model\wiki.en directory and c. put the wiki.en.bin model into it)
 
 The parameters of the community detection algorithm we used are ''Randomize'' is On, ''Use edge weights'' is On and ''Resolution'' is 1.0.
 
