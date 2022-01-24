@@ -1,6 +1,6 @@
 # BugTossing
 
-Dataset Link: https://drive.google.com/file/d/17XXG75zmR3_bDeWKDNeXYNVL8ptAzUo3/view?usp=sharing
+Dataset link: https://drive.google.com/file/d/17XXG75zmR3_bDeWKDNeXYNVL8ptAzUo3/view?usp=sharing
 Fasttext Model link: https://fasttext.cc/docs/en/pretrained-vectors.html (a. download the English wiki.en.bin model b. Under root directory, construct model\wiki.en directory and c. put the wiki.en.bin model into it)
 
 Software prepare
