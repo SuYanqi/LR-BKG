@@ -1,9 +1,15 @@
 # BugTossing
 
 Dataset Link: https://drive.google.com/file/d/17XXG75zmR3_bDeWKDNeXYNVL8ptAzUo3/view?usp=sharing
-Fasttext Model link: https://fasttext.cc/docs/en/pretrained-vectors.html (a. download the English wiki.en.bin model b. construct model\wiki.en directory and c. put the wiki.en.bin model into it)
+Fasttext Model link: https://fasttext.cc/docs/en/pretrained-vectors.html (a. download the English wiki.en.bin model b. Under root directory, construct model\wiki.en directory and c. put the wiki.en.bin model into it)
 
-The parameters of the community detection algorithm we used are ''Randomize'' is On, ''Use edge weights'' is On and ''Resolution'' is 1.0.
+Software prepare
+1. Neo4j: as the database to save the Bug Tossing Graph
+2. Gephi: Use the community detection algorithm to get the modularity class of the product::component (The parameters of the community detection algorithm we used are ''Randomize'' is On, ''Use edge weights'' is On and ''Resolution'' is 1.0.)
+
+Directory prepare
+1. Construct the data directory under the root directory
+2. Construct the data directory under the scripts directory
 
 Dataset prepare
 1. Run get_product_component.py to get product_component.json (adjust the filepath according to where you put the product_component_files)
