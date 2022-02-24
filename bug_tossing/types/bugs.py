@@ -43,16 +43,16 @@ class Bugs:
         for bug in tqdm(self.bugs, ascii=True):
             bug.get_summary_token_vec(word2vec)
             bug.get_summary_mean_vec()
-            bug.get_description_token_vec(word2vec)
-            bug.get_description_mean_vec()
+            # bug.get_description_token_vec(word2vec)
+            # bug.get_description_mean_vec()
             # i = i + 1
             # print(i)
             # print(f'https://bugzilla.mozilla.org/show_bug.cgi?id={bug.id}')
         # return self.bugs
         self.get_summary_token_tfidf_vec(tfidf)
         self.get_summary_token_onehot_vec(onehot)
-        self.get_description_token_tfidf_vec(tfidf)
-        self.get_description_token_onehot_vec(onehot)
+        # self.get_description_token_tfidf_vec(tfidf)
+        # self.get_description_token_onehot_vec(onehot)
 
     def get_summary_token_tfidf_vec(self, tfidf):
         summary_token_list = self.get_bug_summary_token_list()
@@ -481,24 +481,24 @@ class Bugs:
             # input()
         return pc_summary_token_list
 
-    def get_pc_bug_description_token_list(self, product_component_pair_list):
-        pc_bug_description_token_list = list()
+    def get_pc_description_token_list(self, product_component_pair_list):
+        pc_description_token_list = list()
         for pc in product_component_pair_list:
             # print(pc)
             bugs = self.get_specified_product_component_bugs(pc)
-            one_pc_bug_description_token_list = list()
+            one_pc_description_token_list = list()
             for bug in bugs:
                 # print(bug.summary_token)
                 # print(bug.description_token)
                 # one_pc_bug_description_token_list.extend(bug.summary_token)
-                one_pc_bug_description_token_list.extend(bug.description_token)
+                one_pc_description_token_list.extend(bug.description_token)
                 # print(one_pc_summary_description_token_list)
                 # input()
-            pc_bug_description_token_list.append(one_pc_bug_description_token_list)
+            pc_description_token_list.append(one_pc_description_token_list)
             # print(len(one_pc_summary_token_list))
             # print(one_pc_summary_token_list)
             # input()
-        return pc_bug_description_token_list
+        return pc_description_token_list
 
     def get_bug_summary_vec_matrix(self, VEC_TYPE):
         """

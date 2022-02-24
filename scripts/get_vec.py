@@ -34,7 +34,8 @@ if __name__ == "__main__":
 
     onehot = TfidfOnehotVectorizer()
     # 目前用的idf, 以pc为unit
-    onehot.fit(train_bugs.get_pc_bug_description_token_list(pc_list))
+    onehot.fit(train_bugs.get_pc_summary_token_list(pc_list))
+    # onehot.fit(train_bugs.get_pc_description_token_list(pc_list))
     # 目前用的idf, 以pc为unit（summary description）
     # onehot.fit(train_bugs.get_pc_summary_description_token_list(pc_list))
 
