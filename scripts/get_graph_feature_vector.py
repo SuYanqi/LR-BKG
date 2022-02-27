@@ -13,10 +13,10 @@ if __name__ == "__main__":
 
     FeatureExtractor.get_graph_feature_vector(pc_list, train_bugs,
                                               Path(FEATURE_VECTOR_DIR,
-                                                   f"train_graph_feature_vector_for_ablation"),
+                                                   f"train_graph_feature_vector"),
                                               )
 
     FeatureExtractor.get_graph_feature_vector(pc_list, test_bugs,
                                               Path(FEATURE_VECTOR_DIR,
-                                                   f"test_graph_feature_vector_for_ablation"),
+                                                   f"test_graph_feature_vector"),
                                               )

@@ -140,24 +140,24 @@ if __name__ == "__main__":
 
     test_bugs = FileUtil.load_pickle(PathUtil.get_test_bugs_filepath())
 
-    # is_train = 1
-    # FeatureExtractor.get_feature_vector(TOP_N_BUG_SUMMARY_FEATURE_VECTOR_NUM, pc_list, bug_num_list,
-    #                                     historical_tfidf_summary_matrix,
-    #                                     train_bugs,
-    #                                     is_train,
-    #                                     Path(FEATURE_VECTOR_DIR,
-    #                                          f"train_top_{TOP_N_BUG_SUMMARY_FEATURE_VECTOR_NUM}_tfidf_onehot_percentage"),
-    #                                     pc_name_tfidf_vec_matrix,
-    #                                     pc_description_tfidf_vec_matrix,
-    #                                     TOP_M_MISTOSSED_BUG_SUMMARY_FEATURE_VECTOR_NUM,
-    #                                     mistossed_bug_num_list,
-    #                                     historical_mistossed_tfidf_summary_matrix,
-    #
-    #                                     pc_name_onehot_vec_matrix,
-    #                                     pc_description_onehot_vec_matrix,
-    #                                     historical_onehot_summary_matrix,
-    #                                     historical_mistossed_onehot_summary_matrix
-    #                                     )
+    is_train = 1
+    FeatureExtractor.get_feature_vector(TOP_N_BUG_SUMMARY_FEATURE_VECTOR_NUM, pc_list, bug_num_list,
+                                        historical_tfidf_summary_matrix,
+                                        train_bugs,
+                                        is_train,
+                                        Path(FEATURE_VECTOR_DIR,
+                                             f"train_top_{TOP_N_BUG_SUMMARY_FEATURE_VECTOR_NUM}_tfidf_onehot_percentage"),
+                                        pc_name_tfidf_vec_matrix,
+                                        pc_description_tfidf_vec_matrix,
+                                        TOP_M_MISTOSSED_BUG_SUMMARY_FEATURE_VECTOR_NUM,
+                                        mistossed_bug_num_list,
+                                        historical_mistossed_tfidf_summary_matrix,
+
+                                        pc_name_onehot_vec_matrix,
+                                        pc_description_onehot_vec_matrix,
+                                        historical_onehot_summary_matrix,
+                                        historical_mistossed_onehot_summary_matrix
+                                        )
     is_train = 0
     FeatureExtractor.get_feature_vector(TOP_N_BUG_SUMMARY_FEATURE_VECTOR_NUM, pc_list, bug_num_list,
                                         historical_tfidf_summary_matrix,

@@ -15,10 +15,12 @@ Dataset prepare
 1. Run get_product_component.py to get product_component.json (adjust the filepath according to where you put the product_component_files)
 2. Run filter_bugs.py to get filtered_bugs.json
 3. Run split_train_test_dataset.py to get train_bugs.json and test_bugs.json
-4. Run get_vec.py to get vector for text information
+4. Run get_vec.py to get vector for text information 
+   (Note that after step 4, change the ONEHOT_DIM in config.py according to the onehot.dim from onehot = TfidfOnehotVectorizer()）
 5. Run get_graph_feature_for_pc.py for graph features of product components
 
 Feature vector
+0. Change FEATURE_VECTOR_NUMS_PER_FILE in config.py to (the number of product::component) * 10,000 or FEATURE_VECTOR_NUMS_PER_FILE % (the number of product::component) == 0
 1. Run get_feature_vector.py to get the relevance label and features about text information
 2. Run get_graph_feature_vector.py to get bug feature and features about graph
 3. Run add_feature_vector_graph.py to merge features from step2 and step3
