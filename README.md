@@ -16,6 +16,7 @@ Dataset prepare
 2. Run filter_bugs.py to get filtered_bugs.json
 3. Run split_train_test_dataset.py to get train_bugs.json and test_bugs.json
 4. Run get_vec.py to get vector for text information
+5. Run get_graph_feature_for_pc.py for graph features of product components
 
 Feature vector
 1. Run get_feature_vector.py to get the relevance label and features about text information
