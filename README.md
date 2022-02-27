@@ -28,3 +28,5 @@ Feature vector
 Model
 1. Run train_lambdaMart.py to train the learning to rank model
 2. Run test_lambdaMart.py to test the model
+
+Note that LR-BKG needs amount of memory and disk storage!!!

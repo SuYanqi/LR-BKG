@@ -27,8 +27,8 @@ TOP_N_BUG_SUMMARY_FEATURE_VECTOR_NUM = 30
 
 TOP_M_MISTOSSED_BUG_SUMMARY_FEATURE_VECTOR_NUM = 30
 
-FEATURE_VECTOR_NUMS_PER_FILE = 1860000  # (the number of product::component) * 10,000
-                                        # or FEATURE_VECTOR_NUMS_PER_FILE % (the number of product::component) == 0
+FEATURE_VECTOR_NUMS_PER_FILE = 1860000  # (the number of product::components) * 10,000
+                                        # or FEATURE_VECTOR_NUMS_PER_FILE % (the number of product::components) == 0
 
 BLOCK_SIZE = 10000
 
