@@ -225,7 +225,7 @@ class ProductComponentPairs:
                 pc.participant_probability = pc_mistossed_bug_num_list[index]/bugs_num
 
     def get_degree(self, bugs):
-        node_set, edge_set = bugs.get_nodes_edges_for_graph_goal_oriented_path()
+        node_set, edge_set = bugs.get_nodes_edges_for_graph_goal_oriented_path(self.product_component_pair_list)
         for pc in self.product_component_pair_list:
             pc_name = f'{pc.product}::{pc.component}'
             for edge in edge_set:
