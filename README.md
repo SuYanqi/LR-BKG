@@ -20,10 +20,10 @@ Dataset prepare
 5. Run get_graph_feature_for_pc.py for graph features of product components
 
 Feature vector
-0. Change FEATURE_VECTOR_NUMS_PER_FILE in config.py to (the number of product::component) * 10,000 or FEATURE_VECTOR_NUMS_PER_FILE % (the number of product::component) == 0
-1. Run get_feature_vector.py to get the relevance label and features about text information
-2. Run get_graph_feature_vector.py to get bug feature and features about graph
-3. Run add_feature_vector_graph.py to merge features from step2 and step3
+1. Change FEATURE_VECTOR_NUMS_PER_FILE in config.py to (the number of product::component) * 10,000 or FEATURE_VECTOR_NUMS_PER_FILE % (the number of product::component) == 0
+2. Run get_feature_vector.py to get the relevance label and features about text information
+3. Run get_graph_feature_vector.py to get bug feature and features about graph
+4. Run add_feature_vector_graph.py to merge features from step2 and step3
 
 Model
 1. Run train_lambdaMart.py to train the learning to rank model
