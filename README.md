@@ -28,6 +28,6 @@ Feature vector
 
 Model
 1. Run train_lambdaMart.py to train the learning to rank model
-2. Run test_lambdaMart.py to test the model
+2. Run test_lambdaMart.py to test the model (change PRODUCT_COMPONENT_PAIR_NUM in config.py to the number of product::component)
 
 Note that LR-BKG needs amount of memory and disk storage!!!
