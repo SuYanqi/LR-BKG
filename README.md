@@ -30,4 +30,7 @@ Model
 1. Run train_lambdaMart.py to train the learning to rank model
 2. Run test_lambdaMart.py to test the model (change PRODUCT_COMPONENT_PAIR_NUM in config.py to the number of product::component)
 
+Result
+1. Run change_result_format.py to change result.csv (got from test_lambdaMart.py) into a more readable format
+
 Note that LR-BKG needs amount of memory and disk storage!!!
