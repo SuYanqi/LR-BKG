@@ -15,9 +15,10 @@ Dataset prepare
 1. Run get_product_component.py to get product_component.json (adjust the filepath according to where you put the product_component_files)
 2. Run filter_bugs.py to get filtered_bugs.json
 3. Run split_train_test_dataset.py to get train_bugs.json and test_bugs.json
-4. Run get_vec.py to get vector for text information 
+4. Run generate_tossing_graph_goal_oriented_path.py to get Bug Tossing Graph (a. need to connect with Neo4j b. train_bugs only)
+5. Run get_vec.py to get vector for text information 
    (Note that after step 4, change the ONEHOT_DIM in config.py according to the onehot.dim from onehot = TfidfOnehotVectorizer()）
-5. Run get_graph_feature_for_pc.py for graph features of product components
+6. Run get_graph_feature_for_pc.py for graph features of product components
 
 Feature vector
 1. Change FEATURE_VECTOR_NUMS_PER_FILE in config.py to (the number of product::component) * 10,000 or FEATURE_VECTOR_NUMS_PER_FILE % (the number of product::component) == 0

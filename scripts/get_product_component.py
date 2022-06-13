@@ -4,6 +4,9 @@ from bug_tossing.utils.path_util import PathUtil
 import csv
 
 if __name__ == "__main__":
+    '''
+    Note that need to adjust column number according to the data table
+    '''
     with open('/Users/suyanqi/Desktop/product_component.txt') as file_obj:
         pairlist = []
         content = file_obj.readline()

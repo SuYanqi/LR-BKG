@@ -87,4 +87,15 @@ if __name__ == "__main__":
                                             frequency=edge.frequency, probability=edge.probability)
                 graph.create(begin_to_end)
 
-    # 将数据从Neo4j中导出，使用   CALL apoc.export.graphml.all("pc_goal_oriented_frequency_4.graphml", {})
+    '''
+    1. export data from Neo4j can use ->       CALL apoc.export.graphml.all("pc_goal_oriented_frequency_2.graphml", {})
+    2. import pc_goal_oriented_frequency_2.graphml into Gephi
+    3. Use the community detection algorithm to get the modularity class of the product::component (The parameters of the community detection algorithm we used are ''Randomize'' is On, ''Use edge weights'' is On and ''Resolution'' is 1.0.)
+    4. Export data table from Gephi: a. click "Data Laboratory" b. click "Export table" c. get product_component_community.csv
+    5. Insert Modularity Class into product_components.json (refer to get_product_component.py)
+    '''
+
+    # can refer to https://blog.csdn.net/weixin_41194171/article/details/108218473 (create a new database, set password and start)
+    # can refer to https://blog.csdn.net/xx1710/article/details/88869328 (The client is unauthorized due to authentication)
+    # can refer to https://blog.csdn.net/qq_42225047/article/details/107858317 (create node and relation)
+    # can refer to https://blog.csdn.net/sinat_36226553/article/details/109124456 (how to install and set 'Algo' plugins)
