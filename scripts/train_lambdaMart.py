@@ -18,7 +18,7 @@ from config import FEATURE_VECTOR_DIR
 
 # 18328
 if __name__ == "__main__":
-    model = LambdaMART.train_model(Path(FEATURE_VECTOR_DIR, "train_graph_feature_vector_for_ablation"))
+    model = LambdaMART.train_model(Path(FEATURE_VECTOR_DIR, "train_top_30_tfidf_onehot_percentage_graph_feature_vector"))
 
     # model = LambdaMART.train_model(Path(FEATURE_VECTOR_DIR, "train_top_30_tfidf_onehot_percentage_graph"))
     # model = LambdaMART.train_model(Path(FEATURE_VECTOR_DIR, "train_top_30_tfidf_onehot_percentage_concept_set_onehot_tfidf"))
