@@ -1,4 +1,5 @@
 import numpy as np
+from sklearn.metrics import label_ranking_average_precision_score
 
 
 class MetricsUtil:
@@ -82,5 +83,17 @@ class MetricsUtil:
                 average_ndcg[key] = average_ndcg[key]/len(result_list)
 
         return average_ndcg
+
+    @staticmethod
+    def mrr(y_true, y_score):
+        """
+        If there is exactly one relevant label per sample,
+        label ranking average precision is equivalent to the mean reciprocal rank
+
+        y_true is the ground truth
+        y_score is the score predicted
+        """
+        return label_ranking_average_precision_score(y_true, y_score)
+
 
 

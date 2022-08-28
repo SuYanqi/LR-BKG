@@ -14,8 +14,17 @@ if __name__ == "__main__":
     '''
     change PRODUCT_COMPONENT_PAIR_NUM in config.py according to the the number of Product::Components
     '''
+    all_bugs = ""
+    # all_bugs = "tossed"
+    # all_bugs = "untossed"
     # ablation = "bug_description"
-    test_dir = Path(FEATURE_VECTOR_DIR, f"test_top_30_tfidf_onehot_percentage_graph_feature_vector")
+    if all_bugs == "":
+        test_dir = Path(FEATURE_VECTOR_DIR, f"test_top_30_tfidf_onehot_percentage_graph_feature_vector")
+    elif all_bugs == "tossed":
+        test_dir = Path(FEATURE_VECTOR_DIR, f"test_top_30_tfidf_onehot_percentage_graph_feature_vector_tossed")
+    else:
+        test_dir = Path(FEATURE_VECTOR_DIR, f"test_top_30_tfidf_onehot_percentage_graph_feature_vector_untossed")
+
     # test_dir = Path(FEATURE_VECTOR_DIR, f"test_top_30_tfidf_onehot_percentage_{ablation}_graph_feature_vector")
 
     # test_dir = Path(FEATURE_VECTOR_DIR, f"test_top_30_tfidf_onehot_percentage_graph_{ablation}")
@@ -45,5 +54,12 @@ if __name__ == "__main__":
                            'relevance_label': relevance_label_list, 'preds': preds})
 
     # result.to_csv(Path(OUTPUT_DIR, f"result_{ablation}.csv"), sep=',', header=True, index=True)
-    result.to_csv(Path(OUTPUT_DIR, f"result.csv"), sep=',', header=True, index=True)
+
+    if all_bugs == "":
+        result.to_csv(Path(OUTPUT_DIR, f"result.csv"), sep=',', header=True, index=True)
+    elif all_bugs == "tossed":
+        result.to_csv(Path(OUTPUT_DIR, f"tossed_result.csv"), sep=',', header=True, index=True)
+    else:
+        result.to_csv(Path(OUTPUT_DIR, f"untossed_result.csv"), sep=',', header=True, index=True)
+
 

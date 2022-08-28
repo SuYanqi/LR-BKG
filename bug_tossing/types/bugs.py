@@ -40,9 +40,9 @@ class Bugs:
         :return: bugs with those
         """
         # i = 0
-        for bug in tqdm(self.bugs, ascii=True):
-            bug.get_summary_token_vec(word2vec)
-            bug.get_summary_mean_vec()
+        # for bug in tqdm(self.bugs, ascii=True):
+        #     bug.get_summary_token_vec(word2vec)
+        #     bug.get_summary_mean_vec()
             # bug.get_description_token_vec(word2vec)
             # bug.get_description_mean_vec()
             # i = i + 1
