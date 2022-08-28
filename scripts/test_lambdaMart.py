@@ -14,13 +14,13 @@ if __name__ == "__main__":
     '''
     change PRODUCT_COMPONENT_PAIR_NUM in config.py according to the the number of Product::Components
     '''
-    all_bugs = ""
-    # all_bugs = "tossed"
-    # all_bugs = "untossed"
+    test_bugs_type = ""  # test all test bugs
+    # all_bugs = "tossed"  # test tossed test bugs
+    # all_bugs = "untossed"  # test all untossed test bugs
     # ablation = "bug_description"
-    if all_bugs == "":
+    if test_bugs_type == "":
         test_dir = Path(FEATURE_VECTOR_DIR, f"test_top_30_tfidf_onehot_percentage_graph_feature_vector")
-    elif all_bugs == "tossed":
+    elif test_bugs_type == "tossed":
         test_dir = Path(FEATURE_VECTOR_DIR, f"test_top_30_tfidf_onehot_percentage_graph_feature_vector_tossed")
     else:
         test_dir = Path(FEATURE_VECTOR_DIR, f"test_top_30_tfidf_onehot_percentage_graph_feature_vector_untossed")
@@ -55,9 +55,9 @@ if __name__ == "__main__":
 
     # result.to_csv(Path(OUTPUT_DIR, f"result_{ablation}.csv"), sep=',', header=True, index=True)
 
-    if all_bugs == "":
+    if test_bugs_type == "":
         result.to_csv(Path(OUTPUT_DIR, f"result.csv"), sep=',', header=True, index=True)
-    elif all_bugs == "tossed":
+    elif test_bugs_type == "tossed":
         result.to_csv(Path(OUTPUT_DIR, f"tossed_result.csv"), sep=',', header=True, index=True)
     else:
         result.to_csv(Path(OUTPUT_DIR, f"untossed_result.csv"), sep=',', header=True, index=True)

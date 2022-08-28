@@ -17,7 +17,7 @@ Dataset prepare
 3. Run split_train_test_dataset.py to get train_bugs.json and test_bugs.json
 4. Run generate_tossing_graph_goal_oriented_path.py to get Bug Tossing Graph (a. need to connect with Neo4j b. train_bugs only)
 5. Run get_vec.py to get vector for text information 
-   (Note that after step 4, change the ONEHOT_DIM in config.py according to the onehot.dim from onehot = TfidfOnehotVectorizer()）
+   (Note that after step 5, change the ONEHOT_DIM in config.py according to the onehot.dim from onehot = TfidfOnehotVectorizer()）
 6. Run get_graph_feature_for_pc.py for graph features of product components
 
 Feature vector
@@ -28,9 +28,15 @@ Feature vector
 
 Model
 1. Run train_lambdaMart.py to train the learning to rank model
-2. Run test_lambdaMart.py to test the model (change PRODUCT_COMPONENT_PAIR_NUM in config.py to the number of product::component)
 
 Result
-1. Run change_result_format.py to change result.csv (got from test_lambdaMart.py) into a more readable format
+1. Run test_lambdaMart.py to test the model (change PRODUCT_COMPONENT_PAIR_NUM in config.py to the number of product::component)
+2. Run change_result_format.py to change result.csv (got from test_lambdaMart.py) into a more readable format (metrics.json))
+3. Run calculate_accuracy_ndcg.py to calculate accuracy and ndcg
+4. Run get_mrr.py to calculate mrr
+
+5. Run split_test_dataset_into_tossed_and_untossed.py to split test_bugs.json into tossed_test_bugs.json and untossed_test_bugs.json
+6. Run split_test_feature_vector_into_tossed_untossed.py to split test_feature_vector into tossed and untossed
+7. Reuse Result (Step 1-4) to calculate the result (accuracy, ndcg, mrr) on tossed and untossed bugs (Note that adjust "test_bugs_type" to choose which kind of test bugs for testing)
 
 Note that LR-BKG needs amount of memory and disk storage!!!

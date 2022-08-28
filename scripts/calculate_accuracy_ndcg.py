@@ -178,13 +178,13 @@ def get_ndcg(all_numpy_list, all_pc_numpy_list):
 if __name__ == "__main__":
     # ablation = "degree"
     # metrics = FileUtil.load_json(PathUtil.get_our_metrics_ablation_filepath(ablation))
-    all_bugs = ""
-    # all_bugs = "tossed"
-    # all_bugs = "untossed"
+    test_bugs_type = ""  # test all test bugs
+    # test_bugs_type = "tossed"  # test tossed test bugs
+    # test_bugs_type = "untossed"  # test untossed test bugs
 
-    if all_bugs == "":
+    if test_bugs_type == "":
         metrics = FileUtil.load_json(PathUtil.get_our_metrics_filepath())
-    elif all_bugs == "tossed":
+    elif test_bugs_type == "tossed":
         metrics = FileUtil.load_json(PathUtil.get_our_tossed_metrics_filepath())
     else:
         metrics = FileUtil.load_json(PathUtil.get_our_untossed_metrics_filepath())
@@ -260,9 +260,9 @@ if __name__ == "__main__":
         print(result)
 
     # FileUtil.dump_pickle(PathUtil.get_our_result_ablation_filepath(ablation), result_list)
-    if all_bugs == "":
+    if test_bugs_type == "":
         FileUtil.dump_pickle(PathUtil.get_our_result_filepath(), result_list)
-    elif all_bugs == "tossed":
+    elif test_bugs_type == "tossed":
         FileUtil.dump_pickle(PathUtil.get_our_tossed_result_filepath(), result_list)
     else:
         FileUtil.dump_pickle(PathUtil.get_our_untossed_result_filepath(), result_list)

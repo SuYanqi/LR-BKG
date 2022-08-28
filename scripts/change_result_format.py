@@ -33,22 +33,22 @@ def accuracy(list):
 if __name__ == "__main__":
     tool_name = "our_approach"
     # ablation = "ablation"
-    all_bugs = ""
-    # all_bugs = "tossed"
-    # all_bugs = "untossed"
+    test_bugs_type = ""  # test all test bugs
+    # test_bugs_type = "tossed"  # test tossed test bugs
+    # test_bugs_type = "untossed"  # test untossed test bugs
 
     pc_list = FileUtil.load_pickle(PathUtil.get_pc_filepath())
 
-    if all_bugs == "tossed":
+    if test_bugs_type == "tossed":
         test_bugs_filepath = PathUtil.get_tossed_test_bugs_filepath()
-    elif all_bugs == "untossed":
+    elif test_bugs_type == "untossed":
         test_bugs_filepath = PathUtil.get_untossed_test_bugs_filepath()
     else:
         test_bugs_filepath = PathUtil.get_test_bugs_filepath()
     test_bugs = FileUtil.load_pickle(test_bugs_filepath)
 
     tmp_lst = list()
-    if all_bugs == "":
+    if test_bugs_type == "":
         with open(Path(OUTPUT_DIR, f"result.csv"), 'r') as f:
         # with open(Path(OUTPUT_DIR, f"result_{ablation}.csv"), 'r') as f:
 
@@ -56,7 +56,7 @@ if __name__ == "__main__":
             for row in reader:
                 tmp_lst.append(row)
     else:
-        with open(Path(OUTPUT_DIR, f"{all_bugs}_result.csv"), 'r') as f:
+        with open(Path(OUTPUT_DIR, f"{test_bugs_type}_result.csv"), 'r') as f:
             reader = csv.reader(f)
             for row in reader:
                 tmp_lst.append(row)
@@ -89,9 +89,9 @@ if __name__ == "__main__":
 
     Path(METRICS_DIR, tool_name).mkdir(exist_ok=True, parents=True)
 
-    if all_bugs == "":
+    if test_bugs_type == "":
         # FileUtil.dump_json(Path(METRICS_DIR, "our_approach", f"metrics_{ablation}.json"), output)
         FileUtil.dump_json(Path(METRICS_DIR, tool_name, f"metrics.json"), output)
 
     else:
-        FileUtil.dump_json(Path(METRICS_DIR, tool_name, f"{all_bugs}_metrics.json"), output)
+        FileUtil.dump_json(Path(METRICS_DIR, tool_name, f"{test_bugs_type}_metrics.json"), output)

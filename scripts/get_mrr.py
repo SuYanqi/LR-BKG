@@ -61,16 +61,16 @@ if __name__ == "__main__":
     # result_dir = "for_ICSE2022/bug_summary_description_15"
 
     ############################################
-    all_bugs = ""
-    # all_bugs = "tossed_"
-    # all_bugs = "untossed_"
+    test_bugs_type = ""  # test all test bugs
+    # test_bugs_type = "tossed_"  # test tossed test bugs
+    # test_bugs_type = "untossed_"  # test untossed test bugs
     ############################################
     # test_bugs = FileUtil.load_pickle(PathUtil.get_test_bugs_filepath())
     test_bugs = FileUtil.load_pickle(PathUtil.get_tossed_test_bugs_filepath())
     # test_bugs = FileUtil.load_pickle(PathUtil.get_untossed_test_bugs_filepath())
     ############################################
 
-    data = pd.read_csv(Path(OUTPUT_DIR, f"{all_bugs}result.csv"))
+    data = pd.read_csv(Path(OUTPUT_DIR, f"{test_bugs_type}result.csv"))
     relevance_label_list, preds_list = get_relevance_label_list_preds_list(data)
     get_pc_mrr_dict = get_pc_mrr_dict(test_bugs, relevance_label_list, preds_list)
     for pc in get_pc_mrr_dict.keys():
