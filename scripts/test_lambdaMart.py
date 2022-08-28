@@ -16,7 +16,7 @@ if __name__ == "__main__":
     '''
     test_bugs_type = ""  # test all test bugs
     # all_bugs = "tossed"  # test tossed test bugs
-    # all_bugs = "untossed"  # test all untossed test bugs
+    # all_bugs = "untossed"  # test untossed test bugs
     # ablation = "bug_description"
     if test_bugs_type == "":
         test_dir = Path(FEATURE_VECTOR_DIR, f"test_top_30_tfidf_onehot_percentage_graph_feature_vector")
