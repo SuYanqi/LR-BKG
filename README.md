@@ -37,6 +37,6 @@ Result
 
 5. Run split_test_dataset_into_tossed_and_untossed.py to split test_bugs.json into tossed_test_bugs.json and untossed_test_bugs.json
 6. Run split_test_feature_vector_into_tossed_untossed.py to split test_feature_vector into tossed and untossed
-7. Reuse Result (Step 1-4) to calculate the result (accuracy, ndcg, mrr) on tossed and untossed bugs (Note that adjust "test_bugs_type" to choose which kind of test bugs for testing)
+7. Reuse Result (Step 1-4) to calculate the result (accuracy, ndcg, mrr) on tossed and untossed bugs (Note that adjust "test_bugs_type" in Result (Step 1-4) python files to choose which kind of test bugs for testing)
 
 Note that LR-BKG needs amount of memory and disk storage!!!
